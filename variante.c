@@ -56,7 +56,7 @@ int normaliseCapteur( int valCapteur[8]) {
         total += valCapteur[i];
     }
  
-    moyenne = getRealAverage(total);
+    moyenne = total >>= 2;
  
     return(moyenne);
 }
