@@ -29,7 +29,7 @@ int main(void) {
     printf( "La durée du programme est --> %ld ms\n", duree );  
 }
  
-int intcmp(const void *aa, const void *bb) {
+int intCmp(const void *aa, const void *bb) {
     const int *a = aa, *b = bb;
     return (*a < *b) ? -1 : (*a > *b);
 }
@@ -45,7 +45,7 @@ int normaliseCapteur( int valCapteur[8]) {
     int moyenne;
  
     // Cette fonction va nous permettre de sort nos valeurs selon un ordre croissant
-    qsort(valCapteur, 8, sizeof(int), intcmp);
+    qsort(valCapteur, 8, sizeof(int), intCmp);
  
     // On enlève les deux extrêmes de chaque côté donc on va de valCapteur[2] à valCapteur[6]
     for( int i = 2; i < 6; i++) {
